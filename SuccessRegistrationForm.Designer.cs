@@ -64,7 +64,11 @@
             ClientSize = new Size(344, 211);
             Controls.Add(label1);
             Controls.Add(okButton);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Location = new Point(500, 500);
+            MaximizeBox = false;
             Name = "SuccessRegistrationForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SuccessForm";
             ResumeLayout(false);
             PerformLayout();

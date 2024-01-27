@@ -45,9 +45,9 @@ namespace RegistrationApp
                 {
                     if (_accountsDB.IsAccountPasswordCorrect(account, passwordInputTextBox.Text))
                     {
-                        var successForm= new SuccessRegistrationForm();
+                        var successForm = new SuccessRegistrationForm();
                         successForm.ShowDialog();
-                       
+
                     }
                     else
                     {
@@ -56,7 +56,7 @@ namespace RegistrationApp
                     }
                 }
             }
-         
+
 
         }
 
@@ -78,7 +78,26 @@ namespace RegistrationApp
         private void loginInputTextBox_TextChanged(object sender, EventArgs e)
         {
             _isValidLogin = _validator.IsValidLogin(loginInputTextBox.Text);
-            if(loginInputTextBox.BackColor == Color.Red) loginInputTextBox.BackColor = Color.White;
+            if (loginInputTextBox.BackColor == Color.Red) loginInputTextBox.BackColor = Color.White;
         }
+
+        private void eyeVisibleLoginButton_Click(object sender, EventArgs e)
+        {
+            if (!passwordInputTextBox.UseSystemPasswordChar)
+            {
+                eyeVisibleLoginButton.BackColor = Color.WhiteSmoke;
+                passwordInputTextBox.UseSystemPasswordChar = true;
+
+            }
+            else
+            {
+                eyeVisibleLoginButton.BackColor = Color.LightGreen;
+                passwordInputTextBox.UseSystemPasswordChar = false;
+            }
+
+
+        }
+
+
     }
 }

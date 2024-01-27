@@ -46,13 +46,16 @@
             phoneRegistrationTextBox = new TextBox();
             emailRegistratinLabel = new Label();
             emailRegistrationTextBox = new TextBox();
+            eyeFirstPasswordVisibleButton = new Button();
+            eyeRepeatPasswordVisibleButton = new Button();
             SuspendLayout();
             // 
             // registrationMainLabel
             // 
             registrationMainLabel.AutoSize = true;
             registrationMainLabel.Font = new Font("Stencil", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            registrationMainLabel.Location = new Point(35, 9);
+            registrationMainLabel.ForeColor = Color.Lime;
+            registrationMainLabel.Location = new Point(90, 9);
             registrationMainLabel.Name = "registrationMainLabel";
             registrationMainLabel.Size = new Size(303, 47);
             registrationMainLabel.TabIndex = 0;
@@ -61,158 +64,211 @@
             // loginRegistrationLabel
             // 
             loginRegistrationLabel.AutoSize = true;
-            loginRegistrationLabel.Location = new Point(22, 68);
+            loginRegistrationLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            loginRegistrationLabel.ForeColor = Color.WhiteSmoke;
+            loginRegistrationLabel.Location = new Point(24, 275);
             loginRegistrationLabel.Name = "loginRegistrationLabel";
-            loginRegistrationLabel.Size = new Size(84, 20);
+            loginRegistrationLabel.Size = new Size(77, 24);
             loginRegistrationLabel.TabIndex = 1;
-            loginRegistrationLabel.Text = "Input login:";
+            loginRegistrationLabel.Text = "Login:";
             // 
             // loginRegistratioinTextBox
             // 
             loginRegistratioinTextBox.BackColor = Color.White;
-            loginRegistratioinTextBox.Location = new Point(183, 68);
+            loginRegistratioinTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            loginRegistratioinTextBox.Location = new Point(218, 268);
             loginRegistratioinTextBox.Name = "loginRegistratioinTextBox";
-            loginRegistratioinTextBox.Size = new Size(125, 27);
+            loginRegistratioinTextBox.Size = new Size(230, 34);
             loginRegistratioinTextBox.TabIndex = 2;
             loginRegistratioinTextBox.TextChanged += loginRegistratioinTextBox_TextChanged;
             // 
             // passwordRegistrationFirstLabel
             // 
             passwordRegistrationFirstLabel.AutoSize = true;
-            passwordRegistrationFirstLabel.Location = new Point(22, 115);
+            passwordRegistrationFirstLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            passwordRegistrationFirstLabel.ForeColor = Color.Gainsboro;
+            passwordRegistrationFirstLabel.Location = new Point(22, 315);
             passwordRegistrationFirstLabel.Name = "passwordRegistrationFirstLabel";
-            passwordRegistrationFirstLabel.Size = new Size(113, 20);
+            passwordRegistrationFirstLabel.Size = new Size(178, 24);
             passwordRegistrationFirstLabel.TabIndex = 3;
             passwordRegistrationFirstLabel.Text = "Input password:";
             // 
             // passwordRegistrationFirstTextBox
             // 
-            passwordRegistrationFirstTextBox.Location = new Point(183, 115);
+            passwordRegistrationFirstTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordRegistrationFirstTextBox.Location = new Point(218, 308);
             passwordRegistrationFirstTextBox.Name = "passwordRegistrationFirstTextBox";
-            passwordRegistrationFirstTextBox.PasswordChar = '*';
-            passwordRegistrationFirstTextBox.Size = new Size(125, 27);
+            passwordRegistrationFirstTextBox.Size = new Size(182, 34);
             passwordRegistrationFirstTextBox.TabIndex = 4;
+            passwordRegistrationFirstTextBox.UseSystemPasswordChar = true;
             passwordRegistrationFirstTextBox.TextChanged += passwordRegistrationFirstTextBox_TextChanged;
             // 
             // passwordRegistrationSecondLabel
             // 
             passwordRegistrationSecondLabel.AutoSize = true;
-            passwordRegistrationSecondLabel.Location = new Point(22, 167);
+            passwordRegistrationSecondLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            passwordRegistrationSecondLabel.ForeColor = Color.Gainsboro;
+            passwordRegistrationSecondLabel.Location = new Point(24, 355);
             passwordRegistrationSecondLabel.Name = "passwordRegistrationSecondLabel";
-            passwordRegistrationSecondLabel.Size = new Size(126, 20);
+            passwordRegistrationSecondLabel.Size = new Size(191, 24);
             passwordRegistrationSecondLabel.TabIndex = 5;
             passwordRegistrationSecondLabel.Text = "Repeat password:";
             // 
             // passwordRegistrationRepeatTextBox
             // 
-            passwordRegistrationRepeatTextBox.Location = new Point(183, 160);
+            passwordRegistrationRepeatTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordRegistrationRepeatTextBox.Location = new Point(218, 348);
             passwordRegistrationRepeatTextBox.Name = "passwordRegistrationRepeatTextBox";
-            passwordRegistrationRepeatTextBox.PasswordChar = '*';
-            passwordRegistrationRepeatTextBox.Size = new Size(125, 27);
+            passwordRegistrationRepeatTextBox.Size = new Size(182, 34);
             passwordRegistrationRepeatTextBox.TabIndex = 6;
+            passwordRegistrationRepeatTextBox.UseSystemPasswordChar = true;
             passwordRegistrationRepeatTextBox.TextChanged += passwordRegistrationRepeatTextBox_TextChanged;
             // 
             // createAccountButton
             // 
-            createAccountButton.Location = new Point(90, 425);
+            createAccountButton.BackColor = Color.ForestGreen;
+            createAccountButton.Font = new Font("Georgia", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            createAccountButton.ForeColor = Color.White;
+            createAccountButton.Location = new Point(90, 408);
             createAccountButton.Name = "createAccountButton";
-            createAccountButton.Size = new Size(179, 51);
+            createAccountButton.Size = new Size(310, 67);
             createAccountButton.TabIndex = 7;
             createAccountButton.Text = "Create account...";
-            createAccountButton.UseVisualStyleBackColor = true;
+            createAccountButton.UseVisualStyleBackColor = false;
             createAccountButton.Click += createAccountButton_Click;
             // 
             // firstNameRegistrationLabel
             // 
             firstNameRegistrationLabel.AutoSize = true;
-            firstNameRegistrationLabel.Location = new Point(22, 209);
+            firstNameRegistrationLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            firstNameRegistrationLabel.ForeColor = Color.WhiteSmoke;
+            firstNameRegistrationLabel.Location = new Point(24, 75);
             firstNameRegistrationLabel.Name = "firstNameRegistrationLabel";
-            firstNameRegistrationLabel.Size = new Size(116, 20);
+            firstNameRegistrationLabel.Size = new Size(127, 24);
             firstNameRegistrationLabel.TabIndex = 8;
-            firstNameRegistrationLabel.Text = "Input first name:";
+            firstNameRegistrationLabel.Text = "First name:";
             // 
             // firstNameRegistrationTextBox
             // 
-            firstNameRegistrationTextBox.Location = new Point(183, 202);
+            firstNameRegistrationTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            firstNameRegistrationTextBox.Location = new Point(218, 68);
             firstNameRegistrationTextBox.Name = "firstNameRegistrationTextBox";
-            firstNameRegistrationTextBox.Size = new Size(125, 27);
+            firstNameRegistrationTextBox.Size = new Size(230, 34);
             firstNameRegistrationTextBox.TabIndex = 9;
             firstNameRegistrationTextBox.TextChanged += firstNameRegistrationTextBox_TextChanged;
             // 
             // LastNameRegistrationLabel
             // 
             LastNameRegistrationLabel.AutoSize = true;
-            LastNameRegistrationLabel.Location = new Point(22, 252);
+            LastNameRegistrationLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LastNameRegistrationLabel.ForeColor = Color.WhiteSmoke;
+            LastNameRegistrationLabel.Location = new Point(22, 115);
             LastNameRegistrationLabel.Name = "LastNameRegistrationLabel";
-            LastNameRegistrationLabel.Size = new Size(114, 20);
+            LastNameRegistrationLabel.Size = new Size(123, 24);
             LastNameRegistrationLabel.TabIndex = 10;
-            LastNameRegistrationLabel.Text = "Input last name:";
+            LastNameRegistrationLabel.Text = "Last name:";
             // 
             // lastNameRegistrationTextBox
             // 
-            lastNameRegistrationTextBox.Location = new Point(183, 245);
+            lastNameRegistrationTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lastNameRegistrationTextBox.Location = new Point(218, 108);
             lastNameRegistrationTextBox.Name = "lastNameRegistrationTextBox";
-            lastNameRegistrationTextBox.Size = new Size(125, 27);
+            lastNameRegistrationTextBox.Size = new Size(230, 34);
             lastNameRegistrationTextBox.TabIndex = 11;
             lastNameRegistrationTextBox.TextChanged += lastNameRegistrationTextBox_TextChanged;
             // 
             // middleNameRegistrationLabel
             // 
             middleNameRegistrationLabel.AutoSize = true;
-            middleNameRegistrationLabel.Location = new Point(22, 293);
+            middleNameRegistrationLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            middleNameRegistrationLabel.ForeColor = Color.WhiteSmoke;
+            middleNameRegistrationLabel.Location = new Point(24, 155);
             middleNameRegistrationLabel.Name = "middleNameRegistrationLabel";
-            middleNameRegistrationLabel.Size = new Size(138, 20);
+            middleNameRegistrationLabel.Size = new Size(150, 24);
             middleNameRegistrationLabel.TabIndex = 12;
-            middleNameRegistrationLabel.Text = "Input middle name:";
+            middleNameRegistrationLabel.Text = "Middle name:";
             // 
             // middleNameRegistrationTextBox
             // 
-            middleNameRegistrationTextBox.Location = new Point(183, 286);
+            middleNameRegistrationTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            middleNameRegistrationTextBox.Location = new Point(218, 148);
             middleNameRegistrationTextBox.Name = "middleNameRegistrationTextBox";
-            middleNameRegistrationTextBox.Size = new Size(125, 27);
+            middleNameRegistrationTextBox.Size = new Size(230, 34);
             middleNameRegistrationTextBox.TabIndex = 13;
             middleNameRegistrationTextBox.TextChanged += middleNameRegistrationTextBox_TextChanged;
             // 
             // phoneRegistrationLabel
             // 
             phoneRegistrationLabel.AutoSize = true;
-            phoneRegistrationLabel.Location = new Point(22, 332);
+            phoneRegistrationLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            phoneRegistrationLabel.ForeColor = Color.WhiteSmoke;
+            phoneRegistrationLabel.Location = new Point(24, 235);
             phoneRegistrationLabel.Name = "phoneRegistrationLabel";
-            phoneRegistrationLabel.Size = new Size(147, 20);
+            phoneRegistrationLabel.Size = new Size(170, 24);
             phoneRegistrationLabel.TabIndex = 14;
-            phoneRegistrationLabel.Text = "Input phone number:";
+            phoneRegistrationLabel.Text = "Phone number:";
             // 
             // phoneRegistrationTextBox
             // 
-            phoneRegistrationTextBox.Location = new Point(183, 325);
+            phoneRegistrationTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            phoneRegistrationTextBox.Location = new Point(218, 228);
             phoneRegistrationTextBox.Name = "phoneRegistrationTextBox";
-            phoneRegistrationTextBox.Size = new Size(125, 27);
+            phoneRegistrationTextBox.Size = new Size(230, 34);
             phoneRegistrationTextBox.TabIndex = 15;
             phoneRegistrationTextBox.TextChanged += phoneRegistrationTextBox_TextChanged;
             // 
             // emailRegistratinLabel
             // 
             emailRegistratinLabel.AutoSize = true;
-            emailRegistratinLabel.Location = new Point(24, 373);
+            emailRegistratinLabel.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            emailRegistratinLabel.ForeColor = Color.WhiteSmoke;
+            emailRegistratinLabel.Location = new Point(24, 195);
             emailRegistratinLabel.Name = "emailRegistratinLabel";
-            emailRegistratinLabel.Size = new Size(87, 20);
+            emailRegistratinLabel.Size = new Size(77, 24);
             emailRegistratinLabel.TabIndex = 16;
-            emailRegistratinLabel.Text = "Input email:";
+            emailRegistratinLabel.Text = "Email:";
             // 
             // emailRegistrationTextBox
             // 
-            emailRegistrationTextBox.Location = new Point(184, 369);
+            emailRegistrationTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            emailRegistrationTextBox.Location = new Point(218, 188);
             emailRegistrationTextBox.Name = "emailRegistrationTextBox";
-            emailRegistrationTextBox.Size = new Size(125, 27);
+            emailRegistrationTextBox.Size = new Size(230, 34);
             emailRegistrationTextBox.TabIndex = 17;
             emailRegistrationTextBox.TextChanged += emailRegistrationTextBox_TextChanged;
+            // 
+            // eyeFirstPasswordVisibleButton
+            // 
+            eyeFirstPasswordVisibleButton.BackColor = Color.WhiteSmoke;
+            eyeFirstPasswordVisibleButton.BackgroundImage = Properties.Resources.eyeIcon;
+            eyeFirstPasswordVisibleButton.BackgroundImageLayout = ImageLayout.Stretch;
+            eyeFirstPasswordVisibleButton.Location = new Point(417, 308);
+            eyeFirstPasswordVisibleButton.Name = "eyeFirstPasswordVisibleButton";
+            eyeFirstPasswordVisibleButton.Size = new Size(31, 34);
+            eyeFirstPasswordVisibleButton.TabIndex = 18;
+            eyeFirstPasswordVisibleButton.UseVisualStyleBackColor = false;
+            eyeFirstPasswordVisibleButton.Click += eyeFirstPasswordVisibleButton_Click;
+            // 
+            // eyeRepeatPasswordVisibleButton
+            // 
+            eyeRepeatPasswordVisibleButton.BackColor = Color.WhiteSmoke;
+            eyeRepeatPasswordVisibleButton.BackgroundImage = Properties.Resources.eyeIcon;
+            eyeRepeatPasswordVisibleButton.BackgroundImageLayout = ImageLayout.Stretch;
+            eyeRepeatPasswordVisibleButton.Location = new Point(417, 348);
+            eyeRepeatPasswordVisibleButton.Name = "eyeRepeatPasswordVisibleButton";
+            eyeRepeatPasswordVisibleButton.Size = new Size(31, 34);
+            eyeRepeatPasswordVisibleButton.TabIndex = 19;
+            eyeRepeatPasswordVisibleButton.UseVisualStyleBackColor = false;
+            eyeRepeatPasswordVisibleButton.Click += eyeRepeatPasswordVisibleButton_Click;
             // 
             // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(373, 503);
+            ClientSize = new Size(490, 503);
+            Controls.Add(eyeRepeatPasswordVisibleButton);
+            Controls.Add(eyeFirstPasswordVisibleButton);
             Controls.Add(emailRegistrationTextBox);
             Controls.Add(emailRegistratinLabel);
             Controls.Add(phoneRegistrationTextBox);
@@ -231,7 +287,10 @@
             Controls.Add(loginRegistratioinTextBox);
             Controls.Add(loginRegistrationLabel);
             Controls.Add(registrationMainLabel);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "RegistrationForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "RegistrationForm";
             Load += RegistrationForm_Load;
             ResumeLayout(false);
@@ -258,5 +317,7 @@
         private TextBox phoneRegistrationTextBox;
         private Label emailRegistratinLabel;
         private TextBox emailRegistrationTextBox;
+        private Button eyeFirstPasswordVisibleButton;
+        private Button eyeRepeatPasswordVisibleButton;
     }
 }

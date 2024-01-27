@@ -146,7 +146,7 @@ namespace RegistrationApp
             {
                 if (!_isUniqueEmail)
                 {
-                    emailRegistrationTextBox.BackColor=Color.DarkRed;
+                    emailRegistrationTextBox.BackColor = Color.DarkRed;
                 }
             }
             if (!_isValidPhoneNumber)
@@ -158,7 +158,7 @@ namespace RegistrationApp
                     phoneRegistrationTextBox.BackColor = Color.DarkRed;
                 }
             }
-            if (!_isValidFirstPassword || passwordRegistrationRepeatTextBox.Text !=passwordRegistrationFirstTextBox.Text)
+            if (!_isValidFirstPassword || passwordRegistrationRepeatTextBox.Text != passwordRegistrationFirstTextBox.Text)
                 passwordRegistrationFirstTextBox.BackColor = Color.Red;
             if (!_isValidRepeatPassword || passwordRegistrationRepeatTextBox.Text != passwordRegistrationFirstTextBox.Text)
                 passwordRegistrationRepeatTextBox.BackColor = Color.Red;
@@ -168,6 +168,35 @@ namespace RegistrationApp
         {
             if (element.BackColor == Color.Red || element.BackColor == Color.DarkRed)
                 element.BackColor = Color.White;
+        }
+
+        private void eyeFirstPasswordVisibleButton_Click(object sender, EventArgs e)
+        {
+            if (passwordRegistrationFirstTextBox.UseSystemPasswordChar)
+            {
+                passwordRegistrationFirstTextBox.UseSystemPasswordChar = false;
+                eyeFirstPasswordVisibleButton.BackColor = Color.LightGreen;
+
+            }
+            else
+            {
+                passwordRegistrationFirstTextBox.UseSystemPasswordChar = true;
+                eyeFirstPasswordVisibleButton.BackColor = Color.WhiteSmoke;
+            }
+        }
+
+        private void eyeRepeatPasswordVisibleButton_Click(object sender, EventArgs e)
+        {
+            if (passwordRegistrationRepeatTextBox.UseSystemPasswordChar)
+            {
+                passwordRegistrationRepeatTextBox.UseSystemPasswordChar = false;
+                eyeFirstPasswordVisibleButton.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                passwordRegistrationRepeatTextBox.UseSystemPasswordChar = true;
+                eyeRepeatPasswordVisibleButton.BackColor = Color.WhiteSmoke;
+            }
         }
     }
 }
